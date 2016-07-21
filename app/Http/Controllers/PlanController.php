@@ -14,4 +14,10 @@ class PlanController extends Controller
           'plans' => Plan::get(),
       ]);
     }
+
+    public function show(Plan $plan) {
+      return view('plans.show')->with([
+          'plan' => $plan,
+      ]);
+    }
 }

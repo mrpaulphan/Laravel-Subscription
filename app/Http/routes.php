@@ -21,5 +21,7 @@ Route::auth();
 Route::group(['middleware' => 'auth'], function () {
   Route::get('/home', 'HomeController@index')->name('home');
   Route::get('/plans', 'PlanController@index')->name('plans.index');
+  Route::get('/plans/{plan}', 'PlanController@show')->name('plans.show');
+  Route::get('/braintree/token', 'BraintreeTokenController@token')->name('braintree.token');
 
 });

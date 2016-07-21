@@ -15,6 +15,7 @@
                     @if($plan->description)
                       <p>{{ $plan->description}}</p>
                     @endif
+                    <a href="{{ route('plans.show', $plan->slug) }}">Buy now</a>
                     @endforeach
                 </div>
             </div>
