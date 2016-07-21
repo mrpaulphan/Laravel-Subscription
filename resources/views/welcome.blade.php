@@ -9,6 +9,8 @@
 
                 <div class="panel-body">
                     Your Application's Landing Page.
+
+                    <a href="#">Get Started</a>
                 </div>
             </div>
         </div>
