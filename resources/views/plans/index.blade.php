@@ -15,7 +15,10 @@
                     @if($plan->description)
                       <p>{{ $plan->description}}</p>
                     @endif
-                    <a href="{{ route('plans.show', $plan->slug) }}">Buy now</a>
+                    @if (!Auth::user()->subscribedToPlan($plan->braintree_plan, 'main'))
+                      <a href="{{ route('plans.show', $plan->slug) }}" class="btn btn-default pull-right">Choose</a>
+                    @endif
+
                     @endforeach
                 </div>
             </div>
